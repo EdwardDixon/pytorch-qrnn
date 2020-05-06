@@ -168,6 +168,7 @@ class ForgetMult(torch.nn.Module):
     def __init__(self):
         super(ForgetMult, self).__init__()
 
+    @staticmethod
     def forward(self, f, x, hidden_init=None, use_cuda=True):
         # Use CUDA by default unless it's available
         use_cuda = use_cuda and torch.cuda.is_available()
